@@ -52,15 +52,16 @@ dataset/
     val/
   class.yaml/
 ```
-##<class.yaml>
-'''
-train:# 训练集图片路径
-val: # 验证集图片路径
-# 类别数量
-nc: 2
-# 类别名称
-names: [ 'drowsy', 'undrowsy']
-'''
+```
+class.yaml/
+  train:# 训练集图片路径
+  val: # 验证集图片路径
+    #类别数量
+  nc: 2
+    #类别名称
+  names: [ 'drowsy', 'undrowsy']
+```
+
 ### Train the model
 ```bash
 python train.py --data configs/fatigue.yaml --img-size 640 --batch-size 32 --epochs 150 --device 0
